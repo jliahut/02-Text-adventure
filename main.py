@@ -1,6 +1,4 @@
-#!/usr/bin/env python3
 import sys, os, json
-# Check to make sure we are running the correct version of Python
 assert sys.version_info >= (3,7), "This script requires at least Python 3.7"
 
 # The game and item description files (in the same folder as this script)
@@ -8,8 +6,6 @@ game_file = 'zork.json'
 item_file = 'items.json'
 
 
-# Load the contents of the files into the game and items dictionaries. You can largely ignore this
-# Sorry it's messy, I'm trying to account for any potential craziness with the file location
 def load_files():
     try:
         __location__ = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
@@ -22,8 +18,8 @@ def load_files():
 
 # The main function for the game
 def main():
-    current = 'WHOUS'  # The starting location
-    end_game = ['END']  # Any of the end-game locations
+    current = 'PIZZ1'  # The starting location
+    end_game = ['GAME1']  # Any of the end-game locations
 
     (game,items) = load_files()
 
